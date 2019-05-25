@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROVA 2</title>
+</head>
+<body>
+<h1>CADASTRA ENCURTAMENTO DE URL</h1>
+<form action="/cadastrar" method="post">
+    Cadastrar: <input type="text" name="url"><br>
+    {% if top %}
+        <span style="color:red">{{top}}</span><br>
+    {% endif %}
+    <input type="submit" value="Cadastrar">
+</form><br><br><br>
+<h3>Pesquisar sua URL encurtada</h3>
+<form action="/codigo" method="post">
+        Buscar: <input type="text" name="teste"><br>
+        <input type="submit" value="Buscar"><br>
+        {% if error %}
+        <span style="color:red">{{error}}</span><br>
+        {% endif %}
+    </form>
+</body>
+</html>

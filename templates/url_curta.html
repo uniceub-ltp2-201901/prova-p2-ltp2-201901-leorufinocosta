@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>PROVA 2</title>
+</head>
+<body>
+<table border="1">
+        <tr>
+            <th>URL ENCURTADA</th>
+        </tr>
+    {% for consul in consulta %}
+        <tr>
+            <td><a href="{{consul[1]}}">{{consul[0]}}{{consul[2]}}</a></td>
+        </tr>
+    {% endfor %}
+</table><br><br>
+</body>
+</html>
